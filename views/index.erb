@@ -1,0 +1,38 @@
+<!-- views/index.erb -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Results</title>
+    <style>
+        #surveyResults {
+            width: 100%;
+            height: 50vh;
+            display: none; /* Initially hide the embed */
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <label>
+        <input type="checkbox" id="showResultsCheckbox"> Show Survey Results
+    </label>
+</div>
+
+<embed id="surveyResults" src="https://blocksurvey.io/public/report/95c53bf8-3083-4cea-af0a-80f53e293127">
+
+<script>
+    document.getElementById('showResultsCheckbox').addEventListener('change', function() {
+        var surveyResults = document.getElementById('surveyResults');
+        if (this.checked) {
+            surveyResults.style.display = 'block'; // Show the embed element
+        } else {
+            surveyResults.style.display = 'none'; // Hide the embed element
+        }
+    });
+</script>
+
+</body>
+</html>

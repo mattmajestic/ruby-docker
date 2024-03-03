@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "4567:4567"
+    volumes:
+      - .:/usr/src/app
+      - bundle_cache:/usr/local/bundle
+    environment:
+      - RACK_ENV=development
+volumes:
+  bundle_cache:

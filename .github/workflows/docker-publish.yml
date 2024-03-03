@@ -1,0 +1,33 @@
+name: Publish Docker Image to Docker Hub
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      docker_tag:
+        description: 'DockerHub Tag'
+        required: true
+        default: 'latest'
+      debug_mode:
+        description: 'Debug Mode'
+        required: false
+        default: 'false'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Login to Docker Hub
+        run: echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u mattmajestic --password-stdin
+
+      - name: Build and Push to Docker Hub
+        run: |
+          docker build -t mattmajestic/ruby-docker:${{ github.event.inputs.docker_tag }} .
+          docker push mattmajestic/ruby-docker:${{ github.event.inputs.docker_tag }}
+        if: ${{ github.event.inputs.debug_mode }} == 'false'
