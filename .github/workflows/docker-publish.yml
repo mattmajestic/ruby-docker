@@ -28,6 +28,6 @@ jobs:
 
       - name: Build and Push to Docker Hub
         run: |
-          docker build -t mattmajestic/ruby-docker:${{ github.event.inputs.docker_tag }} .
-          docker push mattmajestic/ruby-docker:${{ github.event.inputs.docker_tag }}
+          docker build -t mattmajestic/ruby-docker:latest .
+          docker push mattmajestic/ruby-docker:latest
         if: ${{ github.event.inputs.debug_mode }} == 'false'
