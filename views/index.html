@@ -1,30 +1,35 @@
-<!-- views/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruby with Docker</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        h2, p { margin: 0 0 20px 0; }
-        .emoji { font-size: 24px; }
-    </style>
+    <title>Ruby with Docker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Ruby 💎</h2>
-    <p>Ruby is a dynamic, open-source programming language focused on simplicity and productivity. It's object-oriented, flexible, and supported by a vibrant community.</p>
 
-    <h2>Docker 🐳</h2>
-    <p>Dockerizing Ruby applications ensures consistency across environments, simplifies deployment, and manages dependencies efficiently.</p>
+    <div class="accordion-container">
+        <button class="accordion">Ruby 💎</button>
+        <div class="panel">
+            <p>Ruby is a dynamic, open-source programming language focused on simplicity and productivity. It's object-oriented, flexible, and supported by a vibrant community.</p>
+        </div>
+    
+        <button class="accordion">Docker 🐳</button>
+        <div class="panel">
+            <p>Dockerizing Ruby applications ensures consistency across environments, simplifies deployment, and manages dependencies efficiently.</p>
+        </div>
+    
+        <button class="accordion">Advantages 🌟</button>
+        <div class="panel">
+            <ul>
+                <li>Consistency: Your Ruby app runs the same in every environment.</li>
+                <li>Simplified Dependencies: Easily manage gems and versions in isolated containers.</li>
+                <li>Rapid Deployment: Quickly scale and deploy with Docker containers.</li>
+            </ul>
+        </div>
+    </div>    
 
-    <h2>Advantages 🌟</h2>
-    <ul>
-        <li><span class="emoji">🔄</span> Consistency: Your Ruby app runs the same in every environment.</li>
-        <li><span class="emoji">📦</span> Simplified Dependencies: Easily manage gems and versions in isolated containers.</li>
-        <li><span class="emoji">⚡</span> Rapid Deployment: Quickly scale and deploy with Docker containers.</li>
-    </ul>
-    <p>Docker 🐳 and Ruby 💎 together streamline development, ensuring your apps are portable, consistent, and easy to manage.</p>
+<script src="script.js"></script>
 </body>
 </html>
