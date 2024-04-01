@@ -1,5 +1,7 @@
 # Ruby with Docker 💎
 
+<a href="https://github.com/sponsors/mattmajestic"><img src="https://img.shields.io/badge/Sponsor-GitHub-black?style=for-the-badge&logo=github" alt="Sponsor me on GitHub"></a>
+
 ## Ruby 💎
 Ruby is a dynamic, open-source programming language focused on simplicity and productivity. It's object-oriented, flexible, and supported by a vibrant community.
 
